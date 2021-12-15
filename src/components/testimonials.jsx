@@ -1,9 +1,10 @@
+import {BsPersonCircle} from 'react-icons/bs'
 export const Testimonials = (props) => {
   return (
     <div id='testimonials'>
       <div className='container'>
         <div className='section-title text-center'>
-          <h2>What our clients say</h2>
+          <h2>Our Team</h2>
         </div>
         <div className='row'>
           {props.data
@@ -12,11 +13,12 @@ export const Testimonials = (props) => {
                   <div className='testimonial'>
                     <div className='testimonial-image'>
                       {' '}
-                      <img src={d.img} alt='' />{' '}
+                      <i className={d.icon}></i>
                     </div>
                     <div className='testimonial-content'>
-                      <p>"{d.text}"</p>
-                      <div className='testimonial-meta'> - {d.name} </div>
+                    <div className='testimonial-meta'>  {d.name} </div>
+                      <p>{d.text}</p>
+                     
                     </div>
                   </div>
                 </div>
@@ -27,3 +29,13 @@ export const Testimonials = (props) => {
     </div>
   )
 }
+<div id='footer'>
+<div className='container text-center'>
+  <p>
+    &copy; 2021 Object Detection System . Mini Project by {'group number 34 '}
+    <a href='https://pdpu.ac.in/' rel='nofollow'>
+      PDEU
+    </a>
+  </p>
+</div>
+</div>

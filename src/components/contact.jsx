@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import config from "./config.js";
 import axios from 'axios'
 
+
 export const Contact = (props) => {
   
   const webcamRef = useRef(null);
@@ -73,27 +74,28 @@ const imageupload= async ()=>{
   return (
     <div>
       <div id='contact'>
-        <div className='container'>
+        <div className='container '>
           <div className='col-md-8'>
             <div className='row'>
-              <div className='section-title'>
-                <h2>Paste any link!!!</h2>
+              <div>
+                <h2 >Paste any link</h2>
                 <p>
                   This section allows you to paste any link from web to use the yolov5 object detection on any desired image. 
                 </p>
               </div>
-              <form name='sentMessage' >
-                <div className='form-group'>
+              <form name='sentMessage'>
+                <div className='form-group' >
+                <label className='btn btn-custom btn-lg'>
                   <input
                         type='file'
                         multiple='multiple'
                         id='url'
                         name='url'
-                        className='form-control'
+                        className='form-control btn btn-custom btn-lg ' 
+                        style={{backgroundColor:'transparent',borderColor:'transparent',display:'none'}}
                         placeholder='URL'
                         required
-                        >
-                          </input>
+                        />Choose File</label>
                   <p className='help-block text-danger'></p>
                 </div>
                 <div id='success'></div>

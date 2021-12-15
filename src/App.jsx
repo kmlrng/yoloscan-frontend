@@ -10,6 +10,7 @@ import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
+import {Foterr} from "./components/Foterr";
 import "./App.css";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -33,9 +34,9 @@ const App = () => {
       <Services data={landingPageData.Services} />
       <Contact data={landingPageData.Contact} />
       
-      {/* <Testimonials data={landingPageData.Testimonials} /> */}
-      <Team data={landingPageData.Team} />
-      
+      <Testimonials data={landingPageData.Testimonials} />
+      {/* <Team data={landingPageData.Team} /> */}
+      <Foterr/>
     </div>
   );
 };
